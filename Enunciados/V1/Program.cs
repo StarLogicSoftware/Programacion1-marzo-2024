@@ -21,17 +21,25 @@ do
     Console.Write("Columna a reservar: ");
     columnaReserva = int.Parse(Console.ReadLine());
 
+    // si es invalido, se muestra el mensaje y se vuelve a pedir fila/columna
     if (filaReserva < 1 || filaReserva > 3 ||
             columnaReserva < 1 || columnaReserva > 10)
     {
         Console.WriteLine("La fila/columna esta fuera del rango");
     }
 
+    // mensaje individual por fila y columna
+    if (filaReserva < 1 || filaReserva > 3)
+    {
+        Console.WriteLine("La fila es invalida");
+    }
+    if (columnaReserva < 1 || columnaReserva > 10)
+    {
+        Console.WriteLine("La columna es invalida");
+    }
+
 } while (filaReserva < 1 || filaReserva > 3 ||
             columnaReserva < 1 || columnaReserva > 10);
-
-
-
 
 // Verificamos que el asiento este libre antes de reservar
 if (asientos[--filaReserva, --columnaReserva] == "L")
