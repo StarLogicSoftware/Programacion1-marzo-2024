@@ -20,8 +20,11 @@ filaReserva = int.Parse(Console.ReadLine());
 Console.Write("Columna a reservar: ");
 columnaReserva = int.Parse(Console.ReadLine());
 
+//filaReserva = filaReserva - 1;
+//columnaReserva = columnaReserva - 1;
+
 // guardar una X en el lugar solicitado 
-asientos[filaReserva, columnaReserva] = "X";
+asientos[--filaReserva, --columnaReserva] = "X";
 
 // mostrar todos los asientos
 for (int fila = 0; fila < 3; fila++)
