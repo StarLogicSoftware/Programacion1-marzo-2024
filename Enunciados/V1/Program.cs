@@ -20,6 +20,17 @@ filaReserva = int.Parse(Console.ReadLine());
 Console.Write("Columna a reservar: ");
 columnaReserva = int.Parse(Console.ReadLine());
 
+// determinar si el asiento a reservar esta dentro de la matriz
+if ( filaReserva >= 1 && filaReserva <= 3 &&
+    columnaReserva >= 1 && columnaReserva <= 10 )
+{
+    Console.WriteLine("El valor es valido");
+}
+else
+{
+    Console.WriteLine("El valor NO es valido");
+}
+
 // Verificamos que el asiento este libre antes de reservar
 if (asientos[--filaReserva, --columnaReserva] == "L" )
 {
