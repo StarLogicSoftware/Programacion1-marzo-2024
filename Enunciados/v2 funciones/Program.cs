@@ -35,9 +35,9 @@ do
 } while (filaReserva < 1 || filaReserva > 3 ||
             columnaReserva < 1 || columnaReserva > 10);
 
-VerificarAsiento(asientos, filaReserva, columnaReserva);
+ReservarAsiento(asientos, filaReserva, columnaReserva);
 
-void VerificarAsiento(string[,] matriz, int filaAReservar, int columnaAReservar)
+void ReservarAsiento(string[,] matriz, int filaAReservar, int columnaAReservar)
 {
     // Verificamos que el asiento este libre antes de reservar
     if (matriz[--filaAReservar, --columnaAReservar] == "L")
