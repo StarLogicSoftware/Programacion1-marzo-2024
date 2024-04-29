@@ -1,7 +1,7 @@
 ﻿
 /* Sistema para un herrero de protones (v1)
  * Se necesita que realice un calculo del total de perfil estructural de 1/2 pulgada
- * para el armado de portones.
+ * y de 3/4 para el armado de portones.
  * El usuario va ingresando valores de las medidas de los segmentos de caños y para
  * finalizar la carga, ingresa 0.
  * 
@@ -27,23 +27,35 @@
  * 4- Calculo el costo en caños
  * 5- Mostrar total de caños y precio total */
 
-float LongitudCadaPerfil;
-float TotalPerfiles = 0;
-float CostoPorMetro;
-float CostoTotalCaños;
+float LongitudMedia;
+float TotalPerfilesMedia = 0;
+float CostoPorMetroCañoMedia;
+float CostoTotalCañosMedia;
+
+float LongitudTresCuartos;
+float TotalPerfilesTresCuartos = 0;
+float CostoPorMetroCañoTresCuartos;
+float CostoTotalCañosTresCuartos;
 
 do
 {
     Console.Write("Ingrese medida del tramo: ");
-    LongitudCadaPerfil = float.Parse(Console.ReadLine());
+    LongitudMedia = float.Parse(Console.ReadLine());
 
-    TotalPerfiles = TotalPerfiles + LongitudCadaPerfil;
-} while (LongitudCadaPerfil > 0);
+    TotalPerfilesMedia = TotalPerfilesMedia + LongitudMedia;
+} while (LongitudMedia > 0);
 
-Console.Write("Ingrese precio por metro: ");
-CostoPorMetro = float.Parse(Console.ReadLine());
+Console.Write("Ingrese precio por metro del caño de 1/2: ");
+CostoPorMetroCañoMedia = float.Parse(Console.ReadLine());
 
-CostoTotalCaños = TotalPerfiles * CostoPorMetro;
+Console.Write("Ingrese precio por metro del caño de 3/4: ");
+CostoPorMetroCañoTresCuartos = float.Parse(Console.ReadLine());
 
-Console.WriteLine($"Total en caños: {TotalPerfiles}");
-Console.WriteLine($"Total en costo: {CostoTotalCaños}");
+CostoTotalCañosMedia = TotalPerfilesMedia * CostoPorMetroCañoMedia;
+CostoTotalCañosTresCuartos = TotalPerfilesTresCuartos * CostoPorMetroCañoTresCuartos;
+
+Console.WriteLine($"Total en caños de 1/2: {TotalPerfilesMedia}");
+Console.WriteLine($"Total en costo de 1/2: {CostoTotalCañosMedia}");
+
+Console.WriteLine($"Total en caños de 3/4: {TotalPerfilesTresCuartos}");
+Console.WriteLine($"Total en costo de 3/4: {CostoTotalCañosTresCuartos}");
