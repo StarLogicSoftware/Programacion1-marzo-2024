@@ -1,5 +1,4 @@
 ﻿
-
 int CantidadLluvias;
 // Se pide primero la cantidad para saber de cuantas celdas es la matriz
 Console.Write("Cantidad de lluvias a ingresar: ");
