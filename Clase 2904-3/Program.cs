@@ -39,10 +39,13 @@ float CostoTotalCañosTresCuartos;
 
 do
 {
+    // TAREA
+    // MODIFICAR EL BUCLE PARA QUE TRABAJE CON LAS DOS MEDIDAS DE CAÑO
     Console.Write("Ingrese medida del tramo: ");
     LongitudMedia = float.Parse(Console.ReadLine());
 
     TotalPerfilesMedia = TotalPerfilesMedia + LongitudMedia;
+
 } while (LongitudMedia > 0);
 
 Console.Write("Ingrese precio por metro del caño de 1/2: ");
