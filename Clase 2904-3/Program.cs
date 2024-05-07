@@ -27,6 +27,7 @@
  * 4- Calculo el costo en caños
  * 5- Mostrar total de caños y precio total */
 
+
 float LongitudMedia;
 float TotalPerfilesMedia = 0;
 float CostoPorMetroCañoMedia;
@@ -37,28 +38,75 @@ float TotalPerfilesTresCuartos = 0;
 float CostoPorMetroCañoTresCuartos;
 float CostoTotalCañosTresCuartos;
 
+// --------- para el menu ------------
+string OpcionMenu;
+
 do
 {
-    // TAREA
-    // MODIFICAR EL BUCLE PARA QUE TRABAJE CON LAS DOS MEDIDAS DE CAÑO
-    Console.Write("Ingrese medida del tramo: ");
-    LongitudMedia = float.Parse(Console.ReadLine());
+    Console.WriteLine("Elegir medida de perfil: ");
+    Console.WriteLine("1- Caño de 1/2");
+    Console.WriteLine("2- Caño de 3/4");
+    Console.WriteLine("3- Dejar de cargar perfiles");
+    Console.WriteLine();
+    Console.Write("Elija una opcion: ");
+    OpcionMenu = Console.ReadLine();
 
-    TotalPerfilesMedia = TotalPerfilesMedia + LongitudMedia;
+    switch (OpcionMenu)
+    {
+        case "1":
+            
+            do
+            {
+                Console.Write("Ingrese medida del tramo de 1/2: ");
+                LongitudMedia = float.Parse(Console.ReadLine());
 
-} while (LongitudMedia > 0);
+                if (LongitudMedia > 0)
+                {
+                    //TotalPerfilesMedia = TotalPerfilesMedia + LongitudMedia;
+                    TotalPerfilesMedia += LongitudMedia;
+                }
 
-Console.Write("Ingrese precio por metro del caño de 1/2: ");
-CostoPorMetroCañoMedia = float.Parse(Console.ReadLine());
+            } while (LongitudMedia > 0);
 
-Console.Write("Ingrese precio por metro del caño de 3/4: ");
-CostoPorMetroCañoTresCuartos = float.Parse(Console.ReadLine());
+            break;
 
-CostoTotalCañosMedia = TotalPerfilesMedia * CostoPorMetroCañoMedia;
-CostoTotalCañosTresCuartos = TotalPerfilesTresCuartos * CostoPorMetroCañoTresCuartos;
+        case "2":
 
-Console.WriteLine($"Total en caños de 1/2: {TotalPerfilesMedia}");
-Console.WriteLine($"Total en costo de 1/2: {CostoTotalCañosMedia}");
+            do
+            {
+                Console.Write("Ingrese medida del tramo 3/4: ");
+                LongitudTresCuartos = float.Parse(Console.ReadLine());
 
-Console.WriteLine($"Total en caños de 3/4: {TotalPerfilesTresCuartos}");
-Console.WriteLine($"Total en costo de 3/4: {CostoTotalCañosTresCuartos}");
+                if (LongitudTresCuartos > 0)
+                {
+                    TotalPerfilesTresCuartos = TotalPerfilesTresCuartos + LongitudTresCuartos;
+                }
+
+            } while (LongitudTresCuartos > 0);
+
+            break;
+
+        case "3":
+
+            Console.Write("Ingrese precio por metro del caño de 1/2: ");
+            CostoPorMetroCañoMedia = float.Parse(Console.ReadLine());
+
+            Console.Write("Ingrese precio por metro del caño de 3/4: ");
+            CostoPorMetroCañoTresCuartos = float.Parse(Console.ReadLine());
+
+            CostoTotalCañosMedia = TotalPerfilesMedia * CostoPorMetroCañoMedia;
+            CostoTotalCañosTresCuartos = TotalPerfilesTresCuartos * CostoPorMetroCañoTresCuartos;
+
+            Console.WriteLine($"Total en caños de 1/2: {TotalPerfilesMedia}");
+            Console.WriteLine($"Total en costo de 1/2: {CostoTotalCañosMedia}");
+
+            Console.WriteLine($"Total en caños de 3/4: {TotalPerfilesTresCuartos}");
+            Console.WriteLine($"Total en costo de 3/4: {CostoTotalCañosTresCuartos}");
+
+            break;
+
+        default:
+            Console.WriteLine("Opcion incorrecta");
+            break;
+    }
+} while (OpcionMenu != "3");
