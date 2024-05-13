@@ -36,13 +36,11 @@
 */
 
 // --- Variables para caño de 1/2 ---
-float LongitudMedia;
 float TotalPerfilesMedia = 0;
 float CostoPorMetroCañoMedia;
 float CostoTotalCañosMedia;
 
 // --- Variables para caño de 3/4 ---
-float LongitudTresCuartos;
 float TotalPerfilesTresCuartos = 0;
 float CostoPorMetroCañoTresCuartos;
 float CostoTotalCañosTresCuartos;
@@ -65,51 +63,28 @@ do
     {
         case "1": // ----- Cargar caño de 1/2 -----------------------------
 
-            do
-            {
-                Console.Write("Ingrese medida del tramo de 1/2: ");
-                LongitudMedia = float.Parse(Console.ReadLine());
-
-                if (LongitudMedia > 0)
-                {
-                    //TotalPerfilesMedia = TotalPerfilesMedia + LongitudMedia;
-                    TotalPerfilesMedia += LongitudMedia;
-                }
-
-            } while (LongitudMedia > 0);
+            TotalPerfilesMedia = IngresarDatosPerfiles("Ingrese medida tramo de 1/2: ");
 
             break; // ----- Fin Cargar caño de 1/2 -----------------------------
 
         case "2": // ----- Cargar caño de 3/4 -----------------------------
 
-            do
-            {
-                Console.Write("Ingrese medida del tramo 3/4: ");
-                LongitudTresCuartos = float.Parse(Console.ReadLine());
-
-                if (LongitudTresCuartos > 0)
-                {
-                    TotalPerfilesTresCuartos = TotalPerfilesTresCuartos + LongitudTresCuartos;
-                }
-
-            } while (LongitudTresCuartos > 0);
+            TotalPerfilesTresCuartos = IngresarDatosPerfiles("Ingrese medida tramo de 3/4: ");
 
             break;  // ----- Fin Cargar caño de 1/2 -----------------------------
 
         case "3": // ----- Calcular todo -----------------------------
 
             // --- Pedir el precio de cada tipo de caño ---
-            Console.Write("Ingrese precio por metro del caño de 1/2: ");
-            CostoPorMetroCañoMedia = float.Parse(Console.ReadLine());
-
-            Console.Write("Ingrese precio por metro del caño de 3/4: ");
-            CostoPorMetroCañoTresCuartos = float.Parse(Console.ReadLine());
+            CostoPorMetroCañoMedia = PedidoDatoReal("Ingrese precio por metro del caño de 1/2: ");
+            CostoPorMetroCañoTresCuartos = PedidoDatoReal("Ingrese precio por metro del caño de 3/4: ");
 
             // --- Calcular el costo total de cada tipo de caño ---
-            CostoTotalCañosMedia = TotalPerfilesMedia * CostoPorMetroCañoMedia;
-            CostoTotalCañosTresCuartos = TotalPerfilesTresCuartos * CostoPorMetroCañoTresCuartos;
+            CostoTotalCañosMedia = CalcularCostoTotal(TotalPerfilesMedia, CostoPorMetroCañoMedia);
+            CostoTotalCañosTresCuartos = CalcularCostoTotal(TotalPerfilesTresCuartos,CostoPorMetroCañoTresCuartos);
 
             // --- Mostrar toda la informacion al cliente ---
+            Console.WriteLine();
             Console.WriteLine($"Total en caños de 1/2: {TotalPerfilesMedia}");
             Console.WriteLine($"Total en costo de 1/2: {CostoTotalCañosMedia}");
 
@@ -123,3 +98,70 @@ do
             break;
     }
 } while (OpcionMenu != "3");
+
+
+
+
+
+float IngresarDatosPerfiles (string mensaje)
+{
+    float TotalDePerfiles = 0;
+    float LongitudDelPerfil;
+    do
+    {
+        LongitudDelPerfil = PedidoDatoReal(mensaje);
+        if (LongitudDelPerfil > 0)
+        {
+            TotalDePerfiles = TotalDePerfiles + LongitudDelPerfil;
+        }
+
+    } while (LongitudDelPerfil > 0);
+
+    return TotalDePerfiles;
+}
+float PedidoDatoReal(string mensaje)
+{
+    Console.Write(mensaje);
+    return float.Parse(Console.ReadLine());
+}
+
+float CalcularCostoTotal (float totalPerfil, float costoPorMetro)
+{
+    return totalPerfil * costoPorMetro;
+}
+
+
+
+
+float PedidoDatoEntero(string mensaje)
+{
+    Console.Write(mensaje);
+    return int.Parse(Console.ReadLine());
+}
+
+
+
+
+
+
+
+
+// Llamar una funcion
+// CalcularTotal(25, "pepe", true);
+// CalcularTotal(99, "carlos", false);
+
+// declaracion (crarla)
+// firma -> logica
+// valor de retorno - nombre - parametro/s
+// void CalcularTotal (int dato1, string nombre, bool hacer) { ... }
+
+//int totalFactura = Suma(25, 40);
+//int totalRecibo = Suma(45, 21);
+
+
+//int Suma (int n1, int n2)
+//{
+//    int resultado = n1 + n2;
+
+//    return resultado;
+//}
