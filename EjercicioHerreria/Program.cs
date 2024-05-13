@@ -129,10 +129,6 @@ float CalcularCostoTotal (float totalPerfil, float costoPorMetro)
 {
     return totalPerfil * costoPorMetro;
 }
-
-
-
-
 float PedidoDatoEntero(string mensaje)
 {
     Console.Write(mensaje);
