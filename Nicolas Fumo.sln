@@ -15,9 +15,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase 2904-2", "Clase 2904-
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase 2904-3", "Clase 2904-3\Clase 2904-3.csproj", "{46D84C11-34C7-4C64-A8E5-52346CC9F1CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Menu", "Menu\Menu.csproj", "{EE14094D-7207-4C81-BA27-58BFB2ABC9D5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Menu", "Menu\Menu.csproj", "{EE14094D-7207-4C81-BA27-58BFB2ABC9D5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clase 0605 Funciones", "Clase 0605 Funciones\Clase 0605 Funciones.csproj", "{9E0CDAF8-E37E-497E-9461-EA6822CC9947}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase 0605 Funciones", "Clase 0605 Funciones\Clase 0605 Funciones.csproj", "{9E0CDAF8-E37E-497E-9461-EA6822CC9947}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EjercicioHerreria", "EjercicioHerreria\EjercicioHerreria.csproj", "{263E9F45-93E0-4D1A-906F-08B406525FEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -57,6 +59,10 @@ Global
 		{9E0CDAF8-E37E-497E-9461-EA6822CC9947}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9E0CDAF8-E37E-497E-9461-EA6822CC9947}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9E0CDAF8-E37E-497E-9461-EA6822CC9947}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263E9F45-93E0-4D1A-906F-08B406525FEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263E9F45-93E0-4D1A-906F-08B406525FEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263E9F45-93E0-4D1A-906F-08B406525FEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263E9F45-93E0-4D1A-906F-08B406525FEE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
