@@ -11,14 +11,15 @@
 //lista = new List<int>();
 
 List<int> lista = new List<int>();
-
 lista.Add(20); // cargo elementos dentro de la lista
 lista.Add(15);
 lista.Add(25); //
 lista.Add(21); // 
-lista.Add(0);  //
 lista.Add(3);
-lista.Add(21);
+
+int valor = int.Parse(Console.ReadLine());
+
+lista.Add(valor);
 //                   _________ saber cuantos elementos hay en la lista
 Console.WriteLine(lista.Count);
 

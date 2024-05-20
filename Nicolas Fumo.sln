@@ -21,7 +21,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Clase 0605 Funciones", "Cla
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EjercicioHerreria", "EjercicioHerreria\EjercicioHerreria.csproj", "{263E9F45-93E0-4D1A-906F-08B406525FEE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Listas", "Listas\Listas.csproj", "{CC5F2B42-2F7D-47AC-9AFA-7930BA55DE7C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Listas", "Listas\Listas.csproj", "{CC5F2B42-2F7D-47AC-9AFA-7930BA55DE7C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO", "POO\POO.csproj", "{F83C7624-0646-4389-81AE-7268B1D2A170}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -69,6 +71,10 @@ Global
 		{CC5F2B42-2F7D-47AC-9AFA-7930BA55DE7C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CC5F2B42-2F7D-47AC-9AFA-7930BA55DE7C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CC5F2B42-2F7D-47AC-9AFA-7930BA55DE7C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F83C7624-0646-4389-81AE-7268B1D2A170}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F83C7624-0646-4389-81AE-7268B1D2A170}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F83C7624-0646-4389-81AE-7268B1D2A170}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F83C7624-0646-4389-81AE-7268B1D2A170}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
