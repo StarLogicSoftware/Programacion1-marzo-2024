@@ -20,15 +20,18 @@ Examen examen3 = new Examen();
 Examen examen4 = new Examen();
 Examen examen5 = new Examen();
 
+examen1.Cargar();
+examen2.Cargar();
+examen3.Cargar();
+examen4.Cargar();
+examen5.Cargar();
 
+int Promedio;
 
+Promedio = (examen1.Nota + examen2.Nota
+    + examen3.Nota + examen4.Nota + examen5.Nota) / 5;
 
-Console.Write("Nombre alumno: ");
-examen2.Nombre = Console.ReadLine();
-Console.Write("Apellido alumno: ");
-examen2.Apellido = Console.ReadLine();
-Console.Write("Apellido alumno: ");
-examen2.Nota = int.Parse(Console.ReadLine());
+Console.WriteLine($"El promedio general es: {Promedio}");
 
 class Examen
 {
@@ -49,5 +52,7 @@ class Examen
         Apellido = Console.ReadLine();
         Console.Write("Nota alumno: ");
         Nota = int.Parse(Console.ReadLine());
+
+        Console.WriteLine("-----------------");
     }
 }
