@@ -25,7 +25,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Listas", "Listas\Listas.csp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POO", "POO\POO.csproj", "{F83C7624-0646-4389-81AE-7268B1D2A170}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO Practica", "POO Practica\POO Practica.csproj", "{0C527560-363E-44EB-AE1E-AED4CD7F5B2B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POO Practica", "POO Practica\POO Practica.csproj", "{0C527560-363E-44EB-AE1E-AED4CD7F5B2B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO2", "POO2\POO2.csproj", "{9366EEFE-0A94-4233-A9AE-A9D28B073744}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -81,6 +83,10 @@ Global
 		{0C527560-363E-44EB-AE1E-AED4CD7F5B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0C527560-363E-44EB-AE1E-AED4CD7F5B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0C527560-363E-44EB-AE1E-AED4CD7F5B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9366EEFE-0A94-4233-A9AE-A9D28B073744}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9366EEFE-0A94-4233-A9AE-A9D28B073744}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9366EEFE-0A94-4233-A9AE-A9D28B073744}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9366EEFE-0A94-4233-A9AE-A9D28B073744}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
