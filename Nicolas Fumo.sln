@@ -29,6 +29,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "POO Practica", "POO Practic
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO2", "POO2\POO2.csproj", "{9366EEFE-0A94-4233-A9AE-A9D28B073744}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProblemaAutito", "ProblemaAutito\ProblemaAutito.csproj", "{B99AB6FA-D6D1-47E3-A691-56EE63366FFD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -87,6 +89,10 @@ Global
 		{9366EEFE-0A94-4233-A9AE-A9D28B073744}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9366EEFE-0A94-4233-A9AE-A9D28B073744}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9366EEFE-0A94-4233-A9AE-A9D28B073744}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B99AB6FA-D6D1-47E3-A691-56EE63366FFD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B99AB6FA-D6D1-47E3-A691-56EE63366FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B99AB6FA-D6D1-47E3-A691-56EE63366FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B99AB6FA-D6D1-47E3-A691-56EE63366FFD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

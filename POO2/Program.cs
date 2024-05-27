@@ -1,56 +1,34 @@
-﻿
-// instanciar un objeto (crear)
-Persona secretario = new Persona();
-Persona docente = new Persona();
+﻿cuantaBancaria cuentita = new cuantaBancaria();
 
-secretario.nombre = "Alex";
-secretario.edad = 21;
+cuentita.Depositar(100);
+cuentita.Extraer(1000);
 
-docente.nombre = "Nicolas";
-docente.edad = 25;
-
-secretario.Saludar();
-docente.Saludar();
-
-Auto autito = new Auto();
-
-autito.Color = "rojo";
-
-Console.Write(autito.Color);
-
-Matematica calculos = new Matematica();
-
-calculos.sumar(25, 40);
-
-class Persona
+class cuantaBancaria
 {
-    public int edad; // varaibles -> propiedades
-    public string nombre;
-    public string direccion;
-    public string telefono;
+    public string Titular;
+    private int saldo;
 
-    public void Saludar()
+    public void Depositar(int cantidad)
     {
-        //...
-    }
-}
-
-class Auto
-{
-    public string Color;
-    public string Marca;
-    public string Modelo;
-}
-
-class Matematica
-{
-    public int sumar(int a, int b)
-    {
-        return a + b;
+       if(cantidad < 0)
+        {
+            Console.WriteLine("El valor no puede ser negativo");
+        }
+        else
+        {
+            saldo += cantidad;
+        }
     }
 
-    public int restar(int a, int b)
+    public void Extraer(int cantidad)
     {
-        return a - b;
+        if(cantidad > saldo)
+        {
+            Console.WriteLine("No te alcanza la guita");
+        }
+        else
+        {
+            // dar plata
+        }
     }
 }
