@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "POO2", "POO2\POO2.csproj", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProblemaAutito", "ProblemaAutito\ProblemaAutito.csproj", "{B99AB6FA-D6D1-47E3-A691-56EE63366FFD}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ListadoTareas", "ListadoTareas\ListadoTareas.csproj", "{82FF0183-2615-4A03-A566-7B576F02DCF5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{B99AB6FA-D6D1-47E3-A691-56EE63366FFD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B99AB6FA-D6D1-47E3-A691-56EE63366FFD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B99AB6FA-D6D1-47E3-A691-56EE63366FFD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82FF0183-2615-4A03-A566-7B576F02DCF5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82FF0183-2615-4A03-A566-7B576F02DCF5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82FF0183-2615-4A03-A566-7B576F02DCF5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82FF0183-2615-4A03-A566-7B576F02DCF5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

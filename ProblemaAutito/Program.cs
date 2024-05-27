@@ -9,15 +9,10 @@
         Conducir(int km): Método que incrementa el kilometraje del coche en km kilómetros.*/
 
 // instanciar (crear) un objeto del tipo Coche
-Coche autito = new Coche();
-
-autito.Marca = "Fiat";
-autito.Modelo = "Palio";
-autito.Año = 2014;
-autito.Kilometraje = 103250;
+Coche autito = new Coche("Fiat", "Palio", 2014, 103000);
+Coche autito2 = new Coche("Renault", "Clio", 2018, 57000);
 
 autito.MostrarInformacion();
-
 int KmRecorridos;
 Console.Write("Ingrese los km que ha recorrido: ");
 KmRecorridos = int.Parse(Console.ReadLine());
@@ -26,9 +21,21 @@ autito.Conducir(KmRecorridos);
 
 autito.MostrarInformacion();
 
+void Sumar()
+{
+
+}
 
 class Coche
 {
+    public Coche(string marca, string modelo, int año, int kilometraje)
+    {
+        Marca = marca;
+        Modelo = modelo;
+        Año = año;
+        Kilometraje = kilometraje;
+    }
+
     public string Marca;
     public string Modelo;
     public int Año;
