@@ -45,6 +45,16 @@ void Menu()
 
         case "2": // Listar
 
+            foreach (var item in tareas)
+            {
+                Console.WriteLine($" -> {item.Titulo}");
+            }
+            Console.WriteLine(); // salto de linea para separar elementos
+
+            // Pausa para que se puedan ver los elementos antes de borrar la consola
+            Console.WriteLine("Presione una tecla para continuar....");
+            Console.ReadKey();
+
             Console.Clear();
             Menu();
 
@@ -52,7 +62,27 @@ void Menu()
 
 
         case "3": // Ver tarea
-            
+            int contador = 1;
+            int tareaAVer;
+
+            foreach (var item in tareas)
+            {
+                Console.WriteLine($"{contador} -> {item.Titulo}");
+
+                contador++;
+            }
+
+            Console.WriteLine(); // espacio en blanco para no mezclar cosas
+
+            Console.Write("Ingrese tarea a ver: ");
+            tareaAVer = int.Parse(Console.ReadLine());
+
+            tareaAVer -= 1;
+
+            Tarea tarea = tareas[tareaAVer];
+
+            tarea.Ver();
+
             Console.WriteLine("Presione una tecla para continuar....");
             Console.ReadKey();
             Console.Clear();
