@@ -11,8 +11,7 @@ PARTE 2 DEL PROGRAMA
     7- Marcar con color rojo la terminada y la verde la sin terminar
  */
 
-
-Tarea tarea1 = new Tarea();
+List<Tarea> tareas = new List<Tarea>();
 
 Menu();
 
@@ -32,18 +31,28 @@ void Menu()
     switch (opcion)
     {
         case "1": // Cargar
-            tarea1.Cargar();
+
+            Tarea tareaCargar = new Tarea();
+
+            tareaCargar.Cargar();
+
+            tareas.Add(tareaCargar);
 
             Console.Clear();
             Menu();
             break;
+
+
         case "2": // Listar
 
             Console.Clear();
             Menu();
+
             break;
+
+
         case "3": // Ver tarea
-            tarea1.Ver();
+            
             Console.WriteLine("Presione una tecla para continuar....");
             Console.ReadKey();
             Console.Clear();
@@ -82,3 +91,4 @@ class Tarea
         Console.WriteLine($"Descripcion: {Descripcion}");
     }
 }
+
