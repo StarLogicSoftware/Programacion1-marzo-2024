@@ -62,24 +62,8 @@ void Menu()
 
 
         case "3": // Ver tarea
-            int contador = 1;
-            int tareaAVer;
 
-            foreach (var item in tareas)
-            {
-                Console.WriteLine($"{contador} -> {item.Titulo}");
-
-                contador++;
-            }
-
-            Console.WriteLine(); // espacio en blanco para no mezclar cosas
-
-            Console.Write("Ingrese tarea a ver: ");
-            tareaAVer = int.Parse(Console.ReadLine());
-
-            tareaAVer -= 1;
-
-            Tarea tarea = tareas[tareaAVer];
+            Tarea tarea = BuscarTarea(tareas);
 
             tarea.Ver();
 
@@ -88,7 +72,12 @@ void Menu()
             Console.Clear();
             Menu();
             break;
+
         case "4": // Eliminar tarea
+
+            Tarea tareaBorrar = BuscarTarea(tareas);
+
+            tareas.Remove(tareaBorrar);
 
             Console.Clear();
             Menu();
@@ -100,6 +89,29 @@ void Menu()
             Menu();
             break;
     }
+}
+
+Tarea BuscarTarea(List<Tarea> listadoTareas)
+{
+    int contador = 1;
+    int tareaAVer;
+
+    foreach (var item in listadoTareas)
+    {
+        Console.WriteLine($"{contador} -> {item.Titulo}");
+
+        contador++;
+    }
+
+    Console.WriteLine(); // espacio en blanco para no mezclar cosas
+    Console.Write("Ingrese tarea a ver: ");
+    tareaAVer = int.Parse(Console.ReadLine());
+
+    tareaAVer -= 1;
+    Tarea tarea = tareas[tareaAVer];
+
+    return tarea;
+   // return tareas[tareaAVer]; // -> alternativa corta
 }
 
 class Tarea
