@@ -23,6 +23,7 @@ tareas.Add(t1);
 Tarea t2 = new Tarea();
 t2.Titulo = "tarea 2";
 t2.Descripcion = "Descripcion 2";
+t2.terminado = true;
 tareas.Add(t2);
 
 Tarea t3 = new Tarea();
@@ -66,6 +67,8 @@ void Menu()
 
             tareaCargar.Cargar();
 
+            tareaCargar.terminado = false;
+
             tareas.Add(tareaCargar);
 
             Console.Clear();
@@ -77,7 +80,20 @@ void Menu()
 
             foreach (var item in tareas)
             {
+                // Depende si esta terminado o no, se coloca color verde o rojo
+                if(item.terminado)
+                {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                }
+                else
+                {
+                    Console.ForegroundColor = ConsoleColor.Red;
+                }
+
                 Console.WriteLine($" -> {item.Titulo}");
+
+                // volver a colocar el color por defecto (gris)
+                Console.ForegroundColor = ConsoleColor.Gray;
             }
             Console.WriteLine(); // salto de linea para separar elementos
 
@@ -147,6 +163,8 @@ class Tarea
 {
     public string Titulo;
     public string Descripcion;
+    public bool terminado;
+
     public void Cargar()
     {
         Console.WriteLine("----------- Nueva Tarea -----------");
@@ -154,6 +172,9 @@ class Tarea
         Titulo = Console.ReadLine();
         Console.Write("Descripcion: ");
         Descripcion = Console.ReadLine();
+
+        // Si recien se carga, quiere decir que no esta terminada
+        terminado = false;
     }
     public void Ver()
     {
