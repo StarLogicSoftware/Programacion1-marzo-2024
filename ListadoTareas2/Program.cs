@@ -21,14 +21,16 @@ t1.Descripcion = "Descripcion 1";
 tareas.Add(t1);
 
 Tarea t2 = new Tarea();
+
 t2.Titulo = "tarea 2";
 t2.Descripcion = "Descripcion 2";
-t2.terminado = true;
+
 tareas.Add(t2);
 
 Tarea t3 = new Tarea();
 t3.Titulo = "tarea 3";
 t3.Descripcion = "Descripcion 3";
+
 tareas.Add(t3);
 
 Tarea t4 = new Tarea()
@@ -37,12 +39,13 @@ Tarea t4 = new Tarea()
     Descripcion = "Descripcion 4",
 };
 
+tareas.Add(t4);
+
 tareas.Add(new Tarea()
 {
     Titulo = "T5",
     Descripcion = "D5"
 });
-
 
 Menu();
 
@@ -56,6 +59,8 @@ void Menu()
     Console.WriteLine("2- Listar tareas");
     Console.WriteLine("3- Ver una tarea");
     Console.WriteLine("4- Eliminar una tarea");
+    Console.WriteLine("5- Marcar completada");
+    Console.WriteLine("6- Cambiar descripcion a una tarea");
     Console.WriteLine();
     Console.Write("Opcion elegida: ");
     opcion = Console.ReadLine();
@@ -75,13 +80,12 @@ void Menu()
             Menu();
             break;
 
-
         case "2": // Listar
 
             foreach (var item in tareas)
             {
                 // Depende si esta terminado o no, se coloca color verde o rojo
-                if(item.terminado)
+                if (item.terminado)
                 {
                     Console.ForegroundColor = ConsoleColor.Green;
                 }
@@ -106,7 +110,6 @@ void Menu()
 
             break;
 
-
         case "3": // Ver tarea
 
             Tarea tarea = BuscarTarea(tareas);
@@ -127,6 +130,48 @@ void Menu()
 
             Console.Clear();
             Menu();
+            break;
+
+        case "5":
+            // Buscamos la tarea a cambiar de estado
+            Tarea tareaATerminar = BuscarTarea(tareas);
+
+            // Quitamos la tarea antigua de la lista de tareas
+            tareas.Remove(tareaATerminar);
+
+            // Modificamos la copia que sacamos de la lista y marcamos como completada
+            tareaATerminar.terminado = true;
+
+            // guardo nuevamente la tarea
+            tareas.Add(tareaATerminar);
+
+            Console.WriteLine($"Se ha marcado como completada la tarea {tareaATerminar.Titulo}");
+            Console.WriteLine("Presione una tecla para continuar....");
+            Console.ReadKey();
+            Console.Clear();
+            Menu();
+
+            break;
+
+        case "6":
+            // Buscamos la tarea a cambiar de estado
+            Tarea tareaAModificar = BuscarTarea(tareas);
+
+            // Quitamos la tarea antigua de la lista de tareas
+            tareas.Remove(tareaAModificar);
+
+            // Modificamos la copia que sacamos de la lista y marcamos como completada
+            tareaAModificar.ActualizarDescripcion();
+            
+            // guardo nuevamente la tarea
+            tareas.Add(tareaAModificar);
+
+            Console.WriteLine($"Se ha modificada la descripcion de la tarea {tareaAModificar.Titulo}");
+            Console.WriteLine("Presione una tecla para continuar....");
+            Console.ReadKey();
+            Console.Clear();
+            Menu();
+
             break;
 
         default: // cualquier opcion que no sea las anteriores
@@ -181,6 +226,15 @@ class Tarea
         Console.WriteLine("----------- Tarea -----------");
         Console.WriteLine($"Titulo: {Titulo}");
         Console.WriteLine($"Descripcion: {Descripcion}");
+    }
+
+    public void ActualizarDescripcion()
+    {
+        Console.WriteLine("Descripcion antigua:");
+        Console.WriteLine(Descripcion);
+        Console.WriteLine();
+        Console.WriteLine("Ingresa la nueva descripcion y presiona enter:");
+        Descripcion = Console.ReadLine();
     }
 }
 
