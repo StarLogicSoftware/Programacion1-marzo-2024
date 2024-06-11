@@ -1,4 +1,5 @@
-﻿/*
+﻿using ListadoTareas2;
+/*
         --- LISTADO DE TAREAS ---
 CREAR UN PROGRAMA PARA LISTA DE TAREAS QUE DEBE:
     1- Poder cargar tareas a realizar
@@ -203,38 +204,3 @@ Tarea BuscarTarea(List<Tarea> listadoTareas)
     return tarea;
     // return tareas[tareaAVer]; // -> alternativa corta
 }
-
-class Tarea
-{
-    public string Titulo;
-    public string Descripcion;
-    public bool terminado;
-
-    public void Cargar()
-    {
-        Console.WriteLine("----------- Nueva Tarea -----------");
-        Console.Write("Titulo: ");
-        Titulo = Console.ReadLine();
-        Console.Write("Descripcion: ");
-        Descripcion = Console.ReadLine();
-
-        // Si recien se carga, quiere decir que no esta terminada
-        terminado = false;
-    }
-    public void Ver()
-    {
-        Console.WriteLine("----------- Tarea -----------");
-        Console.WriteLine($"Titulo: {Titulo}");
-        Console.WriteLine($"Descripcion: {Descripcion}");
-    }
-
-    public void ActualizarDescripcion()
-    {
-        Console.WriteLine("Descripcion antigua:");
-        Console.WriteLine(Descripcion);
-        Console.WriteLine();
-        Console.WriteLine("Ingresa la nueva descripcion y presiona enter:");
-        Descripcion = Console.ReadLine();
-    }
-}
-
