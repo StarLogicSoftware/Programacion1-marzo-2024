@@ -32,7 +32,7 @@ foreach (var item in personasBuscadas)
     Console.WriteLine(item.Edad);
 }
 
-// equivalente a Find()
+// Equivalente a la funcion lambda del Find()
 //foreach (var item in clientes)
 //{
 //    if(item.Nombre == "Francisco" && item.Edad > 20)
