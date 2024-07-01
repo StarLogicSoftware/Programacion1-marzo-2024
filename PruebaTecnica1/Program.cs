@@ -4,7 +4,6 @@ List<Ticket> tickets = new List<Ticket>();
 
 Menu();
 
-
 void Menu()
 {
     string opcionMenu;
