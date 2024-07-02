@@ -43,7 +43,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClasesenArchivos", "Clasese
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banco", "Banco\Banco.csproj", "{D52CA9AE-E001-413F-8004-33B41B2DE786}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnica1", "PruebaTecnica1\PruebaTecnica1.csproj", "{1A014232-CB99-4290-BBC4-C525C434E42B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebaTecnica1", "PruebaTecnica1\PruebaTecnica1.csproj", "{1A014232-CB99-4290-BBC4-C525C434E42B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeraciones", "Enumeraciones\Enumeraciones.csproj", "{9AF73B9A-FB65-43E4-AC44-6D7CE77E992E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnica1ConRepositorio", "PruebaTecnica1ConRepositorio\PruebaTecnica1ConRepositorio.csproj", "{31D05E69-2FD7-4F79-8379-FD337CDDC586}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -135,6 +139,14 @@ Global
 		{1A014232-CB99-4290-BBC4-C525C434E42B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1A014232-CB99-4290-BBC4-C525C434E42B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1A014232-CB99-4290-BBC4-C525C434E42B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AF73B9A-FB65-43E4-AC44-6D7CE77E992E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AF73B9A-FB65-43E4-AC44-6D7CE77E992E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AF73B9A-FB65-43E4-AC44-6D7CE77E992E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AF73B9A-FB65-43E4-AC44-6D7CE77E992E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{31D05E69-2FD7-4F79-8379-FD337CDDC586}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{31D05E69-2FD7-4F79-8379-FD337CDDC586}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{31D05E69-2FD7-4F79-8379-FD337CDDC586}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{31D05E69-2FD7-4F79-8379-FD337CDDC586}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

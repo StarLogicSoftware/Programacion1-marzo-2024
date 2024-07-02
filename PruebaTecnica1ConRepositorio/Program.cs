@@ -1,30 +1,13 @@
-﻿using PruebaTecnica1;
+﻿using PruebaTecnicaConRepositorio;
 const int cantidadLimiteVenta = 20;
 
-List<Ticket> tickets = new List<Ticket>();
+TicketRepositorio repositorio = new TicketRepositorio();
 
-//--- Tickes de prueba precargados ---
-tickets.Add(new Ticket()
+repositorio.GuardarTicket(new Ticket()
 {
     Nombre = "Nombre 1",
     Apellido = "Apellido 1",
     NroAsiento = 1,
-    Pelicula = "alguna",
-    Valor = 1500
-});
-tickets.Add(new Ticket()
-{
-    Nombre = "Nombre 2",
-    Apellido = "Apellido 2",
-    NroAsiento = 2,
-    Pelicula = "alguna",
-    Valor = 1500
-});
-tickets.Add(new Ticket()
-{
-    Nombre = "Nombre 3",
-    Apellido = "Apellido 3",
-    NroAsiento = 3,
     Pelicula = "alguna",
     Valor = 1500
 });
@@ -53,14 +36,14 @@ void Menu()
             Console.WriteLine("Vender nuevo ticket");
             Console.WriteLine();
 
-            if (tickets.Count < cantidadLimiteVenta)
+            if (repositorio.ObtenerCantidadTickets() < cantidadLimiteVenta)
             {
                 var nuevoTicket = new Ticket();
 
                 bool pudoCargar = nuevoTicket.Cargar(cantidadLimiteVenta);
                 if (pudoCargar)
                 {
-                    tickets.Add(nuevoTicket);
+                    repositorio.GuardarTicket(nuevoTicket);
                 }
             }
             else
@@ -75,7 +58,7 @@ void Menu()
             Console.WriteLine("Tickets vendidos");
             Console.WriteLine();
 
-            foreach (var item in tickets )
+            foreach (var item in repositorio.ObtenerTodos())
             {
                 Console.WriteLine($"Nombre: {item.Nombre}");
                 Console.WriteLine($"Apellido: {item.Apellido}");
@@ -96,7 +79,7 @@ void Menu()
 
             int Total = 0;
 
-            foreach (var item in tickets)
+            foreach (var item in repositorio.ObtenerTodos())
             {
                 Total += item.Valor;
             }
@@ -108,7 +91,7 @@ void Menu()
 
         case "4": // Marcar asistencia
 
-            AsignarAsistencia(tickets);
+            AsignarAsistencia(repositorio.ObtenerTodos());
 
             ResetMenu();
             break;
@@ -117,7 +100,7 @@ void Menu()
             int asistentes = 0;
             int ausentes = 0;
 
-            foreach (var item in tickets)
+            foreach (var item in repositorio.ObtenerTodos())
             {
                 item.MostrarAsistenciaTicket();
 
