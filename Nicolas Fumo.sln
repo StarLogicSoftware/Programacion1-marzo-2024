@@ -45,9 +45,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banco", "Banco\Banco.csproj
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebaTecnica1", "PruebaTecnica1\PruebaTecnica1.csproj", "{1A014232-CB99-4290-BBC4-C525C434E42B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Enumeraciones", "Enumeraciones\Enumeraciones.csproj", "{9AF73B9A-FB65-43E4-AC44-6D7CE77E992E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeraciones", "Enumeraciones\Enumeraciones.csproj", "{9AF73B9A-FB65-43E4-AC44-6D7CE77E992E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PruebaTecnica1ConRepositorio", "PruebaTecnica1ConRepositorio\PruebaTecnica1ConRepositorio.csproj", "{31D05E69-2FD7-4F79-8379-FD337CDDC586}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebaTecnica1ConRepositorio", "PruebaTecnica1ConRepositorio\PruebaTecnica1ConRepositorio.csproj", "{31D05E69-2FD7-4F79-8379-FD337CDDC586}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica 1", "Practica 1\Practica 1.csproj", "{549FE38E-01F2-4331-AD8E-8290A5460AB0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -147,6 +149,10 @@ Global
 		{31D05E69-2FD7-4F79-8379-FD337CDDC586}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{31D05E69-2FD7-4F79-8379-FD337CDDC586}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{31D05E69-2FD7-4F79-8379-FD337CDDC586}.Release|Any CPU.Build.0 = Release|Any CPU
+		{549FE38E-01F2-4331-AD8E-8290A5460AB0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{549FE38E-01F2-4331-AD8E-8290A5460AB0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{549FE38E-01F2-4331-AD8E-8290A5460AB0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{549FE38E-01F2-4331-AD8E-8290A5460AB0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
