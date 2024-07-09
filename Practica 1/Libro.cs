@@ -12,8 +12,8 @@ namespace Practica_1
             Console.WriteLine($"Titulo: {Titulo} Autor: {Autor.ObtenerNombreCompleto()}");
 
             // opcion 2 (la peorcita)
-            string nombreCompletoAutor = Autor.ObtenerNombreCompleto();
-            Console.WriteLine($"Titulo: {Titulo} Autor: {nombreCompletoAutor}");
+            //string nombreCompletoAutor = Autor.ObtenerNombreCompleto();
+            //Console.WriteLine($"Titulo: {Titulo} Autor: {nombreCompletoAutor}");
         }
     }
 }
