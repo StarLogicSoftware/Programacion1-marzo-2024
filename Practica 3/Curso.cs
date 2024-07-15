@@ -17,5 +17,18 @@ namespace Practica_3
             return Nombre + " - " + Instructor + " duracion: " + DuracionHoras;
             return $"{Nombre} - {Instructor} duracion: {DuracionHoras}";
         }
+
+        public void Cargar()
+        {
+            Console.WriteLine();
+            Console.Write("Nombre del curso: ");
+            Nombre = Console.ReadLine();
+
+            Console.Write("Nombre del instructor: ");
+            Instructor = Console.ReadLine();
+
+            Console.Write("Horas de cursado: ");
+            DuracionHoras = int.Parse(Console.ReadLine());
+        }
     }
 }
