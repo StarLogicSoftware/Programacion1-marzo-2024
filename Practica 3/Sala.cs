@@ -63,12 +63,23 @@ namespace Practica_3
 
         public int ObtenerTotalHorasReservadas()
         {
+            int totalHoras = 0;
 
+            foreach (var curso in Reservas)
+            {
+                totalHoras += curso.DuracionHoras;
+            }
+
+            return totalHoras;
         }
 
         public List<Curso> ObtenerCursosPorInstructor(string nombreInstructor)
         {
+            var cursosSegunInstructor = Reservas.FindAll(c => c.Instructor == nombreInstructor);
 
+            return cursosSegunInstructor;
+
+            return Reservas.FindAll(c => c.Instructor == nombreInstructor); // lo mismo
         }
     }
 }
