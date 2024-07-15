@@ -32,7 +32,7 @@ namespace Practica_3
         {
             //var cursoAEliminar = Reservas.Find(c => c.Nombre == nombreCurso);
             // Busca un curso donde en su nombre contenga algo del texto pasado en nombreCurso
-            var cursoAEliminar = Reservas.Find(c => c.Nombre.Contains("prog"));
+            var cursoAEliminar = Reservas.Find(c => c.Nombre.Contains(nombreCurso));
 
             if(cursoAEliminar != null)
             {
@@ -49,6 +49,7 @@ namespace Practica_3
         {
             if(Reservas.Count > 0)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 foreach (var curso in Reservas)
                 {
                     Console.WriteLine($"Curso: {curso.Nombre}, instructor: {curso.Instructor}" +
@@ -57,8 +58,12 @@ namespace Practica_3
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Red;
+
                 Console.WriteLine("No hay reservas para esta sala");
             }
+
+            Console.ForegroundColor = ConsoleColor.Gray;
         }
 
         public int ObtenerTotalHorasReservadas()

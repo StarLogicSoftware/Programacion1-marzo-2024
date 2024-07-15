@@ -22,6 +22,16 @@ int horas = salita.ObtenerTotalHorasReservadas();
 Console.WriteLine();
 Console.WriteLine($"Total de horas de uso de la sala: {horas}");
 
+Console.WriteLine("----------- Quitar una reserva -------------------");
+
+Console.Write("Nombre o parte del nombre del curso a eliminar: ");
+string cursoQuitar = Console.ReadLine();
+
+salita.RemoverReserva(cursoQuitar);
+
+Console.WriteLine(" ---- ");
+salita.MostrarReservas();
+
 Console.WriteLine("----------- Mostrar cursos por instructor --------");
 Console.WriteLine();
 
@@ -34,7 +44,7 @@ if(cursosSegunProfe.Count > 0)
 {
 	foreach (var curso in cursosSegunProfe)
 	{
-		curso.ObtenerDescripcion();
+		Console.WriteLine( curso.ObtenerDescripcion() );
 	}
 }
 else
