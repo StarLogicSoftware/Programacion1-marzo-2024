@@ -49,9 +49,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Enumeraciones", "Enumeracio
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PruebaTecnica1ConRepositorio", "PruebaTecnica1ConRepositorio\PruebaTecnica1ConRepositorio.csproj", "{31D05E69-2FD7-4F79-8379-FD337CDDC586}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica 1", "Practica 1\Practica 1.csproj", "{549FE38E-01F2-4331-AD8E-8290A5460AB0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practica 1", "Practica 1\Practica 1.csproj", "{549FE38E-01F2-4331-AD8E-8290A5460AB0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica 2", "Practica 2\Practica 2.csproj", "{1F1BB8A9-EC33-4C27-96E5-5142B76BFF80}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Practica 2", "Practica 2\Practica 2.csproj", "{1F1BB8A9-EC33-4C27-96E5-5142B76BFF80}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Practica 3", "Practica 3\Practica 3.csproj", "{DE4DF6C1-5DD5-4743-B3F7-66A3FAF8CA84}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -159,6 +161,10 @@ Global
 		{1F1BB8A9-EC33-4C27-96E5-5142B76BFF80}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1F1BB8A9-EC33-4C27-96E5-5142B76BFF80}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1F1BB8A9-EC33-4C27-96E5-5142B76BFF80}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DE4DF6C1-5DD5-4743-B3F7-66A3FAF8CA84}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DE4DF6C1-5DD5-4743-B3F7-66A3FAF8CA84}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DE4DF6C1-5DD5-4743-B3F7-66A3FAF8CA84}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DE4DF6C1-5DD5-4743-B3F7-66A3FAF8CA84}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

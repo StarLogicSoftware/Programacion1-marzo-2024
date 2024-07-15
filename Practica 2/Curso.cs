@@ -25,7 +25,17 @@ namespace Practica_2
 
         public void RemoverEstudiante(string nombreCompleto)
         {
-            // buscar el estudiante y eliminarlo
+            Estudiante estudianteAEliminar = 
+                ListaEstudiantes.Find(e => e.ObtenerNombreCompleto() == nombreCompleto);
+
+            if (estudianteAEliminar != null)
+            {
+                ListaEstudiantes.Remove(estudianteAEliminar);
+            }
+            else
+            {
+                Console.WriteLine("No se encontro ese estudiante");
+            }
         }
 
         public void MostrarInformacionEstudiantes()

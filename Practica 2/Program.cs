@@ -42,3 +42,9 @@ foreach (var estudiante in estudiantesMayoresDe18Años)
     Console.WriteLine($"-> {estudiante.Nombre}, {estudiante.Apellido}");
     //Console.WriteLine($"-> {estudiante.ObtenerNombreCompleto()}");
 }
+
+Console.WriteLine("------------ Removemos un estudiante --------------------");
+
+curso.RemoverEstudiante("Maria Gutierrez");
+
+curso.MostrarInformacionEstudiantes();
