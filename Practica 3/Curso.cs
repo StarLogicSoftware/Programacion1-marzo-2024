@@ -8,16 +8,56 @@ namespace Practica_3
 {
     public class Curso
     {
+        public Curso()
+        {
+            Alumnos = new List<Alumno>();
+        }
+
+        public void AgregarAlumno()
+        {
+            Alumno a = new Alumno();
+
+            a.Cargar();
+
+            Alumnos.Add(a);
+        }
+
+        public void RemoverAlumnoPorNombre()
+        {
+            Console.Write("Nombre del alumno a eliminar: ");
+            string nombreAlumno = Console.ReadLine();
+
+            Alumno alumnoBorrar = Alumnos.Find(a => a.Nombre == nombreAlumno);
+
+            Alumnos.Remove(alumnoBorrar);
+        }
+
+        public void MostrarTodosLosAlumnos()
+        {
+            if(Alumnos.Count > 0)
+            {
+                foreach (var alumno in Alumnos)
+                {
+                    alumno.MostrarInformacion();
+                }
+            }
+            else
+            {
+                Console.WriteLine("No hay alumnos inscriptos a este curso");
+            }
+        }
+
         public string Nombre;
         public string Instructor;
         public int DuracionHoras;
+
+        public List<Alumno> Alumnos;
 
         public string ObtenerDescripcion()
         {
             return Nombre + " - " + Instructor + " duracion: " + DuracionHoras;
             return $"{Nombre} - {Instructor} duracion: {DuracionHoras}";
         }
-
         public void Cargar()
         {
             Console.WriteLine();
