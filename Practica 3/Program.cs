@@ -5,11 +5,16 @@ Sala salita = new Sala(20, "Laboratorio");
 Curso curso_programacion = new Curso();
 curso_programacion.Cargar();
 
-Curso curso_desarrollo_web = new Curso();
-curso_desarrollo_web.Cargar();
+curso_programacion.AgregarAlumno();
+Console.WriteLine();
+curso_programacion.AgregarAlumno();
+
+curso_programacion.CalificarAlumno();
+
+Console.WriteLine("-- Alumnos en el curso --");
+curso_programacion.MostrarTodosLosAlumnos();
 
 salita.AgregarReserva(curso_programacion);
-salita.AgregarReserva(curso_desarrollo_web);
 
 Console.WriteLine("----------- Mostrar reservas ---------------------");
 

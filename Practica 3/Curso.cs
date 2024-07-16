@@ -32,6 +32,37 @@ namespace Practica_3
             Alumnos.Remove(alumnoBorrar);
         }
 
+        public void CalificarAlumno()
+        {
+            Console.Write("Nombre del alumno a calificar: ");
+            string nombreAlumno = Console.ReadLine();
+
+            Alumno alumnoCalificar = Alumnos.Find(a => a.Nombre == nombreAlumno);
+
+            if(alumnoCalificar != null)
+            {
+                Console.Write("Nota del alumno: ");
+
+                int notaAlumno = int.Parse(Console.ReadLine());
+
+                bool pudoCalificar = alumnoCalificar.Calificar(notaAlumno);
+
+                if (pudoCalificar)
+                {
+                    Console.WriteLine($"Nota actualizada del alumno {alumnoCalificar.Nombre}");
+                }
+                else
+                {
+                    Console.WriteLine("La nota no es valida");
+                }
+            }
+            else
+            {
+                Console.WriteLine("No existe este alumno");
+            }
+           
+        }
+
         public void MostrarTodosLosAlumnos()
         {
             if(Alumnos.Count > 0)
